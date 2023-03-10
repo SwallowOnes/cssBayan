@@ -11,14 +11,10 @@ main {
 
 
 .bayan-item{
-    position: relative;
     margin-bottom: 30px;
 }
 .bayan-item_input{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
+    display:none;
 }
 .bayan-item_label{
     display: block;
