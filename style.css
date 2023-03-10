@@ -1,7 +1,44 @@
 body {
     margin: 0;
   }
-
+.field{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 main {
     display: block;
   }
+
+
+.bayan-item{
+    position: relative;
+    margin-bottom: 30px;
+}
+.bayan-item_input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.bayan-item_label{
+    display: block;
+    padding: 20px;
+}
+.header{
+    padding: 0px;
+    display: block;
+}
+.bayan-item_meme{
+    text-align: center;
+    display: none;
+}
+.bayan-item_meme img{
+    height: auto;
+    width: 40%;
+    object-fit: contain;
+    background-repeat: repeat;
+}
+.bayam-item:hover .bayan-item_meme,
+.bayam-item input:checked + label .bayan-item_meme {
+    display: block;
+}
