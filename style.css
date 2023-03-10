@@ -1,40 +1,87 @@
 body {
+    font-family: Arial, sans-serif;
+    color: rgb(253, 0, 0);
     margin: 0;
-  }
+    background-color: blue;
+}
+
 .field{
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 main {
     display: block;
-  }
+}
 
+img {
+    display: block;
+    width: 60vw;
+    height: 30vh;
+}
 
 .bayan-item{
-    margin-bottom: 30px;
+    padding: 1em;
+    
 }
+
 .bayan-item_input{
     display:none;
 }
+
 .bayan-item_label{
-    display: block;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid;
 }
+
 .header{
-    padding: 0px;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    background-color: azure;
 }
+
+.lable{
+    display: flex;
+
+}
+.cross{
+    display: flex;
+    visibility: hidden;
+    transition: all .35s;
+}
+
 .bayan-item_meme{
     text-align: center;
-    display: none;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    /*transition: all .35s ease; */
+    justify-content: center;
+    display: flex;
 }
+
 .bayan-item_meme img{
-    height: auto;
-    width: 40%;
     object-fit: contain;
     background-repeat: repeat;
+    display: flex;
 }
+
 .bayan-item:hover .bayan-item_meme,
-.bayan-item input:checked + label .bayan-item_meme {
-    display: block;
+.bayan-item input:checked + label  .bayan-item_meme {
+    transition: all .35s ease; 
+    visibility: visible;
+    height: auto;
+    opacity: 100;
+}
+
+.bayan-item:hover .cross,
+.bayan-item input:checked + label .cross {
+    transform:rotate(45deg);
+    transition: all .35s;  
+}
+.bayan:hover .cross{    
+    transition: all .35s;
+    visibility: visible;
 }
