@@ -34,7 +34,7 @@ main {
     object-fit: contain;
     background-repeat: repeat;
 }
-.bayam-item:hover .bayan-item_meme,
-.bayam-item input:checked + label .bayan-item_meme {
+.bayan-item:hover .bayan-item_meme,
+.bayan-item input:checked + label .bayan-item_meme {
     display: block;
 }
