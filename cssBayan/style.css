@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    color: rgb(253, 0, 0);
+    font-weight: 900;
+    color: rgb(37, 5, 10);
     margin: 0;
-    background-color: blue;
+    background-color: rgba(212, 196, 121, 0.822);
 }
 
 .field{
@@ -15,12 +16,17 @@ main {
 
 img {
     display: block;
-    width: 60vw;
+    width: 60vw; 
     height: 30vh;
+    
 }
 
+.bayan{
+   max-width: 50em;
+}
 .bayan-item{
     padding: 1em;
+    
     
 }
 
@@ -32,23 +38,25 @@ img {
     display: flex;
     flex-direction: column;
     border-bottom: solid;
+    cursor: pointer;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
     font-size: 1.5em;
-    background-color: azure;
+    color:blue;
 }
 
-.lable{
+.lable_name{
     display: flex;
 
 }
 .cross{
     display: flex;
     visibility: hidden;
-    transition: all .35s;
+    color: black;
+    transition: all .3s;  
 }
 
 .bayan-item_meme{
@@ -67,21 +75,50 @@ img {
     background-repeat: repeat;
     display: flex;
 }
+@media (hover: hover) and (pointer: fine){
 
+    .bayan:hover p.lable_name {
+        color: black;
+      }
+
+    .bayan:hover .cross{    
+        visibility: visible;
+    }
+
+}
+
+@media screen and (max-width: 20em){
+    .bayan{
+        max-width: 80em;
+    }
+    img {
+        width: 70vw;
+        height: 20vh;
+    }
+}
+    
 .bayan-item:hover .bayan-item_meme,
 .bayan-item input:checked + label  .bayan-item_meme {
-    transition: all .35s ease; 
+    transition: all .5s ease; 
     visibility: visible;
     height: auto;
     opacity: 100;
 }
 
-.bayan-item:hover .cross,
+.bayan-item:hover .cross{
+    transform:rotate(45deg);
+
+}
 .bayan-item input:checked + label .cross {
     transform:rotate(45deg);
-    transition: all .35s;  
+ 
 }
-.bayan:hover .cross{    
-    transition: all .35s;
-    visibility: visible;
+.bayan-item input:checked ~ label p.lable_name {
+    color: black; 
 }
+
+
+.bayan:hover p.lable_name {
+    color: black;
+  }
+
