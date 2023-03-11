@@ -85,9 +85,24 @@ img {
         visibility: visible;
     }
 
+    .bayan-item:hover .cross{
+        transform:rotate(45deg);
+    
+    }
+    .bayan:hover p.lable_name {
+        color: black;
+      }
+
+      .bayan-item:hover .bayan-item_meme{
+        transition: all .5s ease; 
+        visibility: visible;
+        height: auto;
+        opacity: 100;
+
+      }
 }
 
-@media screen and (max-width: 20em){
+@media screen and (max-width: 320px){
     .bayan{
         max-width: 80em;
     }
@@ -97,7 +112,7 @@ img {
     }
 }
     
-.bayan-item:hover .bayan-item_meme,
+
 .bayan-item input:checked + label  .bayan-item_meme {
     transition: all .5s ease; 
     visibility: visible;
@@ -105,10 +120,7 @@ img {
     opacity: 100;
 }
 
-.bayan-item:hover .cross{
-    transform:rotate(45deg);
 
-}
 .bayan-item input:checked + label .cross {
     transform:rotate(45deg);
  
@@ -118,7 +130,5 @@ img {
 }
 
 
-.bayan:hover p.lable_name {
-    color: black;
-  }
+
 
