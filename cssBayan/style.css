@@ -3,12 +3,16 @@ body {
     font-weight: 900;
     color: rgb(37, 5, 10);
     margin: 0;
-    background-color: rgba(212, 196, 121, 0.822);
+    background-color: #f5f5eb;
 }
-
+h1{
+    color: black;
+    font-weight: 900;
+}
 .field{
-    display: flex;
-    justify-content: center;
+    display: block;
+    max-width: 50em;
+    margin: auto;
 }
 main {
     display: block;
@@ -16,7 +20,6 @@ main {
 
 img {
     max-width: 100%;
-    
 }
 
 .bayan{
@@ -24,8 +27,6 @@ img {
 }
 .bayan-item{
     padding: 1em;
-    
-    
 }
 
 .bayan-item_input{
@@ -35,7 +36,7 @@ img {
 .bayan-item_label{
     display: flex;
     flex-direction: column;
-    border-bottom: solid;
+    border-top: solid #e4e8e7;
     cursor: pointer;
 }
 
@@ -54,7 +55,7 @@ img {
     display: flex;
     visibility: hidden;
     color: black;
-    transition: all .3s;  
+    transition: all .3s;
 }
 
 .bayan-item_meme{
@@ -73,7 +74,7 @@ img {
     object-fit: contain;
     background-repeat: repeat;
     display: flex;
-    height: 20em;
+
 }
 @media (hover: hover) and (pointer: fine){
 
@@ -81,25 +82,26 @@ img {
         color: black;
       }
 
-    .bayan:hover .cross{    
+    .bayan:hover .cross{
         visibility: visible;
     }
 
     .bayan-item:hover .cross{
         transform:rotate(45deg);
-    
     }
     .bayan:hover p.lable_name {
         color: black;
       }
 
       .bayan-item:hover .bayan-item_meme{
-        transition: all .5s ease; 
+        transition: all .5s ease;
         visibility: visible;
         height: auto;
         opacity: 100;
-
       }
+      .bayan-item_meme_img{
+        height: 20em;
+    }
 }
 
 @media screen and (max-width: 320px){
@@ -112,11 +114,14 @@ img {
 
     }
 
+     .cross{
+        visibility: visible;
+    }
+
 }
-    
 
 .bayan-item input:checked + label  .bayan-item_meme {
-    transition: all .5s ease; 
+    transition: all .5s ease;
     visibility: visible;
     height: auto;
     opacity: 100;
@@ -125,10 +130,9 @@ img {
 
 .bayan-item input:checked + label .cross {
     transform:rotate(45deg);
- 
 }
 .bayan-item input:checked ~ label p.lable_name {
-    color: black; 
+    color: black;
 }
 
 
