@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    margin: 0;
+    background-color: #f5f5eb;
+}
+
+main {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+.title{
+    font-size: 2.2em;
+    color: black;
+    font-weight: 900;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.field{
+    display: block;
+    max-width: 50em;
+    margin: auto;
+}
+
+.bayan{
+   max-width: 50em;
+}
+.bayan-item{
+    padding: 1em;
+}
+
+.bayan-item_input{
+    display:none;
+}
+
+.bayan-item_label{
+    display: flex;
+    flex-direction: column;
+    border-top: solid #e4e8e7;
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    color:blue;
+}
+
+.lable_name{
+    display: flex;
+    transition: all .5s ease;
+
+}
+
+.cross{
+    display: flex;
+    visibility: hidden;
+    color: blue;
+    transition: all .3s;
+}
+
+.bayan-item_meme{
+    text-align: center;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.bayan-item_meme_img{
+    object-fit: contain;
+    background-repeat: repeat;
+    display: flex;
+}
+
+.bayan-item input:checked + label  .bayan-item_meme {
+    transition: all .5s ease;
+    visibility: visible;
+    height: auto;
+    opacity: 100;
+}
+
+.bayan-item input:checked + label .cross {
+    transform:rotate(45deg);
+    color:black;
+}
+
+.bayan-item input:checked + label p.lable_name {
+    color: black;
+}
+.bayan-item input:active + label .cross{
+    color: blue;
+  }
+
+.bayan-item input:active + label p.lable_name{
+    color: blue;
+  }
+
+.bayan-item input:active + label .bayan-item_meme_img{
+    opacity: 0.7;
+    transition: all .5s ease;
+  }
+
+
+@media (hover: hover) and (pointer: fine){
+    .bayan:hover .cross{
+        visibility: visible;
+        color: black;
+    }
+
+    .bayan-item:hover .cross{
+        transform:rotate(45deg);
+    }
+
+    .bayan:hover p.lable_name {
+        color: black;
+      }
+
+    .bayan-item:hover .bayan-item_meme{
+        transition: all .5s ease;
+        visibility: visible;
+        height: auto;
+        opacity: 100;
+      }
+
+
+    .bayan-item_meme_img{
+        height: 20em;
+    }
+    .bayan-item input:checked + label  .bayan-item_meme_img {
+        height: 20em;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header{
+        font-size: 1.1em;
+    }
+
+    .bayan-item input:checked + label  .bayan-item_meme_img {
+        height: 20em;
+    }
+}
+
+@media screen and (max-width: 870px){
+    .bayan{
+        max-width: 80em;
+    }
+
+    .header{
+        font-size: 1.3em;
+    }
+
+    .bayan-item input:checked + label  .bayan-item_meme_img {
+        height: 20em;
+    }
+
+    @media (hover: none){
+        .cross{
+            visibility: visible;
+            color:blue;
+       }
+
+       .bayan-item input:checked + label .cross {
+            color:black;
+        }
+
+    }
+}
