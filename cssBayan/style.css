@@ -15,9 +15,7 @@ main {
 }
 
 img {
-    display: block;
-    width: 60vw; 
-    height: 30vh;
+    max-width: 100%;
     
 }
 
@@ -68,12 +66,14 @@ img {
     /*transition: all .35s ease; */
     justify-content: center;
     display: flex;
+    width: 100%;
 }
 
-.bayan-item_meme img{
+.bayan-item_meme_img{
     object-fit: contain;
     background-repeat: repeat;
     display: flex;
+    height: 20em;
 }
 @media (hover: hover) and (pointer: fine){
 
@@ -106,10 +106,12 @@ img {
     .bayan{
         max-width: 80em;
     }
-    img {
-        width: 70vw;
-        height: 20vh;
+
+    .header{
+        font-size: 1.1em;
+
     }
+
 }
     
 
