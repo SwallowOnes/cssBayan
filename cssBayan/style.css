@@ -98,15 +98,16 @@ img {
     color: black;
 }
 .bayan-item input:active + label .cross{
-    color: red;
+    color: blue;
   }
+
 .bayan-item input:active + label p.lable_name{
-    color: red;
+    color: blue;
   }
+
 .bayan-item input:active + label .bayan-item_meme_img{
     opacity: 0.7;
     transition: all .5s ease;
-
   }
 
 
