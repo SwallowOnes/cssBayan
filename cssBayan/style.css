@@ -120,6 +120,25 @@ img {
 
 }
 
+@media screen and (max-width: 1440px){
+    .bayan{
+        max-width: 80em;
+    }
+
+    .header{
+        font-size: 1.1em;
+
+    }
+
+     .cross{
+        visibility: visible;
+    }
+
+    .bayan-item input:checked + label  .bayan-item_meme_img {
+        height: 20em;
+    }
+}
+
 .bayan-item input:checked + label  .bayan-item_meme {
     transition: all .5s ease;
     visibility: visible;
@@ -131,7 +150,7 @@ img {
 .bayan-item input:checked + label .cross {
     transform:rotate(45deg);
 }
-.bayan-item input:checked ~ label p.lable_name {
+.bayan-item input:checked + label p.lable_name {
     color: black;
 }
 
