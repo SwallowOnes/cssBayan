@@ -1,25 +1,30 @@
 body {
     font-family: Arial, sans-serif;
     font-weight: 900;
-    color: rgb(37, 5, 10);
     margin: 0;
     background-color: #f5f5eb;
 }
-h1{
-    color: black;
-    font-weight: 900;
-}
-.field{
-    display: block;
-    max-width: 50em;
-    margin: auto;
-}
+
 main {
     display: block;
 }
 
 img {
     max-width: 100%;
+}
+
+.title{
+    font-size: 2.2em;
+    color: black;
+    font-weight: 900;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.field{
+    display: block;
+    max-width: 50em;
+    margin: auto;
 }
 
 .bayan{
@@ -49,12 +54,14 @@ img {
 
 .lable_name{
     display: flex;
+    transition: all .5s ease;
 
 }
+
 .cross{
     display: flex;
     visibility: hidden;
-    color: black;
+    color: blue;
     transition: all .3s;
 }
 
@@ -64,7 +71,6 @@ img {
     margin: 0;
     opacity: 0;
     visibility: hidden;
-    /*transition: all .35s ease; */
     justify-content: center;
     display: flex;
     width: 100%;
@@ -74,69 +80,6 @@ img {
     object-fit: contain;
     background-repeat: repeat;
     display: flex;
-
-}
-@media (hover: hover) and (pointer: fine){
-
-    .bayan:hover p.lable_name {
-        color: black;
-      }
-
-    .bayan:hover .cross{
-        visibility: visible;
-    }
-
-    .bayan-item:hover .cross{
-        transform:rotate(45deg);
-    }
-    .bayan:hover p.lable_name {
-        color: black;
-      }
-
-      .bayan-item:hover .bayan-item_meme{
-        transition: all .5s ease;
-        visibility: visible;
-        height: auto;
-        opacity: 100;
-      }
-      .bayan-item_meme_img{
-        height: 20em;
-    }
-}
-
-@media screen and (max-width: 320px){
-    .bayan{
-        max-width: 80em;
-    }
-
-    .header{
-        font-size: 1.1em;
-
-    }
-
-     .cross{
-        visibility: visible;
-    }
-
-}
-
-@media screen and (max-width: 1440px){
-    .bayan{
-        max-width: 80em;
-    }
-
-    .header{
-        font-size: 1.1em;
-
-    }
-
-     .cross{
-        visibility: visible;
-    }
-
-    .bayan-item input:checked + label  .bayan-item_meme_img {
-        height: 20em;
-    }
 }
 
 .bayan-item input:checked + label  .bayan-item_meme {
@@ -146,14 +89,72 @@ img {
     opacity: 100;
 }
 
-
 .bayan-item input:checked + label .cross {
     transform:rotate(45deg);
+    color:black;
 }
+
 .bayan-item input:checked + label p.lable_name {
     color: black;
 }
 
+@media (hover: hover) and (pointer: fine){
+    .bayan:hover .cross{
+        visibility: visible;
+        color: black;
+    }
 
+    .bayan-item:hover .cross{
+        transform:rotate(45deg);
+    }
 
+    .bayan:hover p.lable_name {
+        color: black;
+      }
 
+    .bayan-item:hover .bayan-item_meme{
+        transition: all .5s ease;
+        visibility: visible;
+        height: auto;
+        opacity: 100;
+      }
+
+    .bayan-item_meme_img{
+        height: 20em;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .header{
+        font-size: 1.1em;
+    }
+
+    .bayan-item input:checked + label  .bayan-item_meme_img {
+        height: 20em;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .bayan{
+        max-width: 80em;
+    }
+
+    .header{
+        font-size: 1.3em;
+    }
+
+    .bayan-item input:checked + label  .bayan-item_meme_img {
+        height: 15em;
+    }
+
+    @media (hover: none){
+        .cross{
+            visibility: visible;
+            color:blue;
+       }
+
+       .bayan-item input:checked + label .cross {
+            color:black;
+        }
+    }
+}
